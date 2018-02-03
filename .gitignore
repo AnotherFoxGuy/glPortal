@@ -31,3 +31,5 @@ tests/xmlReadingTest/version.txt
 cmake-build-debug/
 compile_commands.json
 history.txt
+!.travis.yml
+!.appveyor.yml

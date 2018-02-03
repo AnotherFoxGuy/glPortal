@@ -1,0 +1,19 @@
+version: 0.1.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
+image: Visual Studio 2017
+cache: C:\Tools\vcpkg\installed\
+configuration: Release
+install:
+- cmd: cd C:\Tools\vcpkg\ && git pull
+- cmd: .\bootstrap-vcpkg.bat
+- cmd: vcpkg install assimp libepoxy sdl2 sdl2-mixer bullet3 tinyxml2 freeimage
+before_build:
+- cmd: cd C:\projects\glPortal
+- cmd: git submodule update --init --recursive
+- cmd: cmake -DCMAKE_TOOLCHAIN_FILE=C:/Tools/vcpkg/scripts/buildsystems/vcpkg.cmake .
+build:
+  project: glportal.sln
+  parallel: true
+  verbosity: normal
+test: off

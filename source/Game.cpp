@@ -9,6 +9,12 @@
 
 #include <glPortal/trigger/PortalTeleport.hpp>
 
+#include <bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h>
+#include <bullet/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h>
+#include <bullet/BulletCollision/CollisionDispatch/btGhostObject.h>
+#include <bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h>
+#include <bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h>
+
 using namespace radix;
 
 namespace glPortal {

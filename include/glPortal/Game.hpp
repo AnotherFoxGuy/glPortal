@@ -11,6 +11,12 @@
 #include <radix/physics/PhysicsDebugDraw.hpp>
 #include <radix/renderer/PortalRenderer.hpp>
 
+#include <bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h>
+#include <bullet/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h>
+#include <bullet/BulletCollision/CollisionDispatch/btGhostObject.h>
+#include <bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h>
+#include <bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h>
+
 #include "glPortal/renderer/GameRenderer.hpp"
 #include "glPortal/renderer/UiRenderer.hpp"
 
